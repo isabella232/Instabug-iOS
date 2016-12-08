@@ -27,6 +27,8 @@ Pod::Spec.new do |s|
   s.source_files = 'Instabug.framework/Versions/A/Headers/*.{h}'
   s.preserve_paths =  'Instabug.framework/*'
   s.frameworks   = 'AVFoundation', 'CoreGraphics', 'CoreMotion', 'SystemConfiguration', 'CoreTelephony', 'UIKit', 'CoreMedia', 'CoreVideo', 'Instabug'
+  s.vendored_frameworks = 'Instabug.framework'
+  s.resource            = 'Instabug.framework/Instabug.bundle'
   s.xcconfig     =  { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Instabug/"' }
   s.requires_arc = true
 end
