@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Instabug"
-  s.version      = "6.1.2"
+  s.version      = "6.2"
   s.summary      = "Bug reporting for mobile apps. Learn more at http://instabug.com"
   s.homepage     = "http://instabug.com"
   s.license      = {
@@ -23,10 +23,9 @@ Pod::Spec.new do |s|
     }
   s.author       = { "Instabug" => "contactus@instabug.com" }
   s.platform     = :ios, '8.0'
-  s.source       = { :git => "https://github.com/Instabug/Instabug-iOS.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/Instabug/Instabug-iOS.git", :branch => 'test62' }
   s.source_files = 'Instabug.framework/Versions/A/Headers/*.{h}'
-  s.resources    = 'Instabug.bundle'
-  s.preserve_paths =  'Instabug.framework/*', 'Instabug.bundle'
+  s.preserve_paths =  'Instabug.framework/*'
   s.frameworks   = 'AVFoundation', 'CoreGraphics', 'CoreMotion', 'SystemConfiguration', 'CoreTelephony', 'UIKit', 'CoreMedia', 'CoreVideo', 'Instabug'
   s.xcconfig     =  { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Instabug/"' }
   s.requires_arc = true
