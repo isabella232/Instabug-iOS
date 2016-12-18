@@ -547,6 +547,40 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)setReportCategoriesWithTitles:(NSArray<NSString *> *)titles iconNames:(nullable NSArray<NSString *> *)names;
 
+/**
+ @brief Set custom user attributes that are going to be sent with each feedback, bug or crash.
+ 
+ @param value User attribute value.
+ @param key User attribute key.
+ */
++ (void)setUserAttribute:(NSString *)value withKey:(NSString *)key;
+
+/**
+ @brief Returns the user attribute associated with a given key.
+ aKey
+ 
+ @param key The key for which to return the corresponding value..
+ 
+ @return The value associated with aKey, or nil if no value is associated with aKey.
+ */
++ (nullable NSString *)userAttributeForKey:(NSString *)key;
+
+/**
+ @brief Removes a given key and its associated value from user attributes.
+ 
+ Does nothing if aKey does not exist.
+ 
+ @param key The key to remove.
+ */
++ (void)removeUserAttributeForKey:(NSString *)key;
+
+/**
+ @brief Returns all user attributes.
+ 
+ @return A new dictionary containing all the currently set user attributes, or an empty dictionary if no user attributes have been set.
+ */
++ (nullable NSDictionary *)userAttributes;
+
 /// -------------------
 /// @name SDK Reporting
 /// -------------------
